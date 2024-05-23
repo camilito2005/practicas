@@ -1,0 +1,89 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:lightgray; */
+}
+
+.registro {
+    width: 100%; /* Cambiado el ancho a 100% para que se adapte al ancho del dispositivo */
+    max-width: 350px; /* Establecido un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+    background: #fdfdfe;
+    padding: 5%;
+    margin: auto;
+    margin-top: 5%; /* Cambiado el valor del margen superior para que sea más pequeño */
+    margin-bottom: 7%;
+    border-radius: 10px;
+    font-family: "arial";
+    color: rgb(10, 12, 12);
+    box-shadow: 5px 5px 5px #161616;
+}
+
+
+.control {
+    width: 100%;
+    background: #faf9fb;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #3a98b9;
+    font-family: "arial";
+    font-size: 18px;
+    color: rgb(67, 20, 20);
+}
+
+.registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.registro a {
+    color: rgb(13, 12, 12);
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+
+.registro a:hover {
+    color: rgb(156, 71, 180);
+    text-decoration: underline;
+}
+
+.boton {
+    width: 100%;
+    background: #3a98b9;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.success {
+    position: absolute;
+    top: 50px;
+    color: #00c83c;
+    font-size: 18px;
+}
+
+.error {
+    position: absolute;
+    top: 50px;
+    color: #e02d00;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    .registro {
+        width: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}

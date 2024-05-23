@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inicio {
+    width: 100%; /* Cambiado el ancho a 90% para que se adapte al ancho del dispositivo */
+    max-width: 280px; /* Establecido un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+    background: #f3f5f6;
+    padding: 5%;
+    margin: auto;
+    margin-top: 10%; /* Cambiado el valor del margen superior para que sea más pequeño */
+    margin-bottom: 10%;
+    border-radius: 2px;
+    font-family: "arial";
+    color: rgb(18, 18, 18);
+    box-shadow: 15px 15px 15px #180101;
+    text-align: center;
+}
+
+.control1 {
+    width: 80%;
+    background: rgb(236, 235, 240);
+    padding: 10px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    border: 1px solid #3a98b9;
+    font-family: "arial";
+    font-size: 18px;
+    color: rgb(44, 43, 43);
+}
+
+
+.inicio .boton, .inicio .boton1 {
+    width: 80%;
+    background: #119cce;
+    border: none;
+    padding: 12px;
+    color: rgb(252, 249, 249);
+    margin: 16px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .inicio {
+        width: 90%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+
+/* .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .login-form {
+        max-width: 300px;
+    }
+} */
