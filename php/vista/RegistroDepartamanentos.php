@@ -20,7 +20,6 @@
 
     <div class="botones">
         <a href="../../menu.php">inicio</a>
-        <a href="../vista/TablaDepartamentos.php">ver registros</a>
     </div>
 </body>
 

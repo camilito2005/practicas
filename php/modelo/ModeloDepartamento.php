@@ -9,7 +9,7 @@ class Departamento{
 
 
         if($r){
-            include "../vista/RegistroDepartamanentos.php";
+            header("Location: ../vista/TablaDepartamentos.php");
             echo "registro exitoso";
             // header("Location ../vista/RegistroDepartamanetos.php");
         }

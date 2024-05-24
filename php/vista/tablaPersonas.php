@@ -61,7 +61,6 @@
         </table>
     </div>
     <div class="botones">
-        <a href="./formulario.php">registro</a>
         <a href="../../menu.php">inicio</a>
     </div>
 

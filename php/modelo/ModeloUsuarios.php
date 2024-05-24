@@ -18,8 +18,16 @@ class Registro
         $consulta = $this->conexion->prepare("INSERT INTO personas (id_departamento,nombre,apellidos,cedula,correo,contraseña) VALUE (?,?,?,?,?,?)");
 
         $consulta->bind_param("ississ", $id_departamento, $nombre, $apellido, $cedula, $correo, $contraseña);
-        $consulta->execute();
-        $consulta->close();
+        if($consulta->execute()){
+            header("Location: ../vista/tablaPersonas.php");
+            $consulta->close();
+        }
+        else {
+            include "../vista/tablaPersonas.php";
+            echo "error";
+        }
+        
+        
     }
 
     public function Modificar($id, $nombre, $apellido, $cedula, $correo, $contraseña)
