@@ -9,7 +9,7 @@ body {
 .registro {
     width: 100%; /* Cambiado el ancho a 100% para que se adapte al ancho del dispositivo */
     max-width: 350px; /* Establecido un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
-    background: #fdfdfe;
+    background: #f3f5f6;
     padding: 5%;
     margin: auto;
     margin-top: 5%; /* Cambiado el valor del margen superior para que sea más pequeño */
@@ -40,30 +40,52 @@ body {
     line-height: 40px;
 }
 
-.registro a {
+/* .registro a {
     color: rgb(13, 12, 12);
     text-decoration: none;
 }
 a{
     text-decoration: none;
-}
+} */
 
-.registro a:hover {
+/* .registro a:hover {
     color: rgb(156, 71, 180);
     text-decoration: underline;
-}
+} */
 
 .boton {
-    width: 100%;
-    background: #3a98b9;
-    border: none;
-    padding: 12px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: rgb(45, 95, 235);
     color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+.boton-inicio {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: rgb(31, 143, 28);
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
 }
 
 .success {

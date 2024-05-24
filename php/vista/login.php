@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/login3.css">
     <title>login</title>
 </head>
 
@@ -15,6 +15,7 @@
         $_SESSION["nombre"];
     }
     ?>
+    
     <div class="inicio">
         <p>inicia session</p>
         <form class="login-form" action="../controlador/ControladorUsuarios.php" method="post">
@@ -25,10 +26,15 @@
                 <input class="control1" placeholder="ingrese su contraseña" required type="password" name="contraseña">
             </label><br><br>
 
-            <input class="boton" type="submit" value="iniciar sesion" name="login">
-            <a class="boton" href="./formulario.php">registrate</a>
+            <div class="botones">
+                <input class="boton1" type="submit" value="iniciar sesion" name="login">
+                <a class="boton" href="./formulario.php">registrate</a>
+            </div>
+
+
         </form>
     </div>
+    <a href="../../menu.php">inicio</a>
 </body>
 
 </html>

@@ -5,12 +5,12 @@ body {
 }
 
 .inicio {
-    width: 100%; /* Cambiado el ancho a 90% para que se adapte al ancho del dispositivo */
-    max-width: 280px; /* Establecido un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+    width: 100%;
+    max-width: 280px; 
     background: #f3f5f6;
     padding: 5%;
     margin: auto;
-    margin-top: 10%; /* Cambiado el valor del margen superior para que sea más pequeño */
+    margin-top: 10%; 
     margin-bottom: 10%;
     border-radius: 2px;
     font-family: "arial";
@@ -32,8 +32,8 @@ body {
 }
 
 
-.inicio .boton, .inicio .boton1 {
-    width: 80%;
+.inicio .boton {
+    /* width: 80%;
     background: #119cce;
     border: none;
     padding: 12px;
@@ -42,10 +42,47 @@ body {
     font-size: 15px;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 6px; */
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: rgb(45, 95, 235);
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+.boton1{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: rgb(33, 167, 16);
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
 }
 
-/* Media Query para pantallas más pequeñas */
+.botones{
+    display: flex;
+    gap: 10px;
+}
+
+
 @media screen and (max-width: 600px) {
     .inicio {
         width: 90%;

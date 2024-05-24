@@ -58,7 +58,7 @@ class Registro
 
         if (isset($validacion)) {
             $_SESSION["correo"] = $correo;
-            header("Location:../vista/menu.php");
+            header("Location:../../menu.php");
         } else {
             include "../vista/login.php";
             echo "credenciales erroneas, por favor intentelo de nuevo";

@@ -3,7 +3,7 @@ require_once "../modelo/ModeloUsuarios.php";
 $funcion = new Registro;
 
 if (isset($_POST["registrar"])) {
-    $id_departamento = 1;
+    $id_departamento = $_POST["departamento"];
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $cedula = $_POST["cedula"];

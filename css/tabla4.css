@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.crud-table {
+    width: 100%;
+    overflow-x: auto;
+    
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    align-items: end;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.modificar {
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #dd8724;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* .modificar{
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 16px;
+    
+} */
+.modificar:hover{
+    color: rgb(240, 244, 247);
+}
+.eliminar{
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #ee1f04;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    /* color: rgb(15, 15, 15);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 16px; */
+}
+.eliminar:hover{
+    color: brown;
+}
+.botones{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        border-bottom: 3px solid #dddddd;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    table td {
+        border-bottom: none;
+        display: block;
+        text-align: right;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+}

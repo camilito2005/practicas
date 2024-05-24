@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/tabla.css">
+    <link rel="stylesheet" href="../../css/tabla4.css">
     <title>Document</title>
 </head>
 
@@ -44,9 +44,12 @@
                         <td><?= $funcion->correo ?></td>
                         <td><?= $funcion->contraseña ?></td>
                         <td>
-                            <a href="./ModificarPersonas.php?id=<?= $funcion->id ?>">modificar</a>
+                            <button class="modificar">
+                                <a href="./ModificarPersonas.php?id=<?= $funcion->id ?>">modificar</a><br>
+                            </button>
+
                             <form action="../controlador/ControladorUsuarios.php?id=<?= $funcion->id ?>" method="post">
-                                <input name="eliminar" type="submit" onclick="return pregunta()" value="eliminar">
+                                <input class="eliminar" name="eliminar" type="submit" onclick="return pregunta()" value="eliminar">
                             </form>
                         </td>
                     </tr>
@@ -57,6 +60,11 @@
             </tbody>
         </table>
     </div>
+    <div class="botones">
+        <a href="./formulario.php">registro</a>
+        <a href="../../menu.php">inicio</a>
+    </div>
+
 </body>
 
 </html>

@@ -9,18 +9,24 @@ $consulta = $conexion->query("SELECT * FROM personas WHERE id = $id");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/modificar1.css">
     <title>modificar</title>
 </head>
 
 <body>
-    <div>
+    <div class="contenedor">
 
         <form action="../controlador/ControladorUsuarios.php" method="post">
             <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
             <?php
             while ($filas = $consulta->fetch_object()) { ?>
 
+                <!-- <label for="">departamento
+                    <select name="" id="">
+                        <option value=""><?= $filas->id_departamento ?></option>
+                    </select>
 
+                </label><br> -->
                 <label for="">nombre
                     <input type="text" value="<?= $filas->nombre ?>" name="nombre">
                 </label><br>
@@ -44,7 +50,7 @@ $consulta = $conexion->query("SELECT * FROM personas WHERE id = $id");
                 </label><br>
 
 
-                <input type="submit" value="modificar" name="modificar">
+                <input type="submit" class="button" value="modificar" name="modificar">
             <?php }
             ?>
         </form>
