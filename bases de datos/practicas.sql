@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2024 a las 06:59:23
+-- Tiempo de generación: 24-05-2024 a las 05:12:32
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `departamento` (
-  `id_departamento` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nombre_departamento` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -36,8 +36,12 @@ CREATE TABLE `departamento` (
 -- Volcado de datos para la tabla `departamento`
 --
 
-INSERT INTO `departamento` (`id_departamento`, `nombre_departamento`) VALUES
-(1, 'bolivar');
+INSERT INTO `departamento` (`id`, `nombre_departamento`) VALUES
+(1, 'bolivar'),
+(3, 'antioquia(medellin)'),
+(7, 'boyaca'),
+(8, 'caldas (manizales)'),
+(9, 'cundinamarca (bogota)');
 
 -- --------------------------------------------------------
 
@@ -46,11 +50,21 @@ INSERT INTO `departamento` (`id_departamento`, `nombre_departamento`) VALUES
 --
 
 CREATE TABLE `menu` (
-  `nosotros` varchar(250) NOT NULL,
-  `mision` varchar(250) NOT NULL,
-  `vision` varchar(250) NOT NULL,
-  `contactanos` varchar(250) NOT NULL
+  `id` int(11) NOT NULL,
+  `opciones` varchar(250) NOT NULL,
+  `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `menu`
+--
+
+INSERT INTO `menu` (`id`, `opciones`, `link`) VALUES
+(2, 'registros', './php/vista/tablaPersonas.php'),
+(3, 'inicia sesion', './php/vista/login.php'),
+(4, 'formulario registro de personas', './php/vista/formulario.php'),
+(5, 'agregar departamentos', './php/vista/RegistroDepartamanentos.php'),
+(6, 'registros', './php/vista/TablaDepartamentos.php');
 
 -- --------------------------------------------------------
 
@@ -73,8 +87,10 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id`, `id_departamento`, `nombre`, `apellidos`, `cedula`, `correo`, `contraseña`) VALUES
-(16, 1, 'prueba', 'g', 1, 'c@gmail.com', '12345'),
-(17, 1, 'camilosss', 'probando', 104, 'prueba@gmail.com', '1234');
+(16, 1, 'prueba 1', 'marrugo1', 1234891, 'ca@gmail.com', '123456'),
+(17, 3, 'camilosss', 'probando', 1043296214, 'prueba@gmail.com', '1234'),
+(22, 7, 'prueba', 'prueba', 1234567, 'pruab@gmail.com', 'camilo'),
+(26, 7, 'camilo', 'prueba', 1043, 'usuarios@gmail.com', '1234');
 
 --
 -- Índices para tablas volcadas
@@ -84,7 +100,13 @@ INSERT INTO `personas` (`id`, `id_departamento`, `nombre`, `apellidos`, `cedula`
 -- Indices de la tabla `departamento`
 --
 ALTER TABLE `departamento`
-  ADD PRIMARY KEY (`id_departamento`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `personas`
@@ -101,13 +123,19 @@ ALTER TABLE `personas`
 -- AUTO_INCREMENT de la tabla `departamento`
 --
 ALTER TABLE `departamento`
-  MODIFY `id_departamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT de la tabla `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
@@ -117,7 +145,7 @@ ALTER TABLE `personas`
 -- Filtros para la tabla `personas`
 --
 ALTER TABLE `personas`
-  ADD CONSTRAINT `personas_ibfk_1` FOREIGN KEY (`id_departamento`) REFERENCES `departamento` (`id_departamento`);
+  ADD CONSTRAINT `personas_ibfk_1` FOREIGN KEY (`id_departamento`) REFERENCES `departamento` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
