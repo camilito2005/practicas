@@ -33,16 +33,6 @@ body {
 
 
 .inicio .boton {
-    /* width: 80%;
-    background: #119cce;
-    border: none;
-    padding: 12px;
-    color: rgb(252, 249, 249);
-    margin: 16px 0;
-    font-size: 15px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 6px; */
     position: relative;
     display: inline-block;
     margin-right: 10px;

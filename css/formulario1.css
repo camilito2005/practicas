@@ -3,16 +3,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color:lightgray; */
 }
 
 .registro {
-    width: 100%; /* Cambiado el ancho a 100% para que se adapte al ancho del dispositivo */
-    max-width: 350px; /* Establecido un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+    width: 100%;
+    max-width: 350px; 
     background: #f3f5f6;
     padding: 5%;
     margin: auto;
-    margin-top: 5%; /* Cambiado el valor del margen superior para que sea más pequeño */
+    margin-top: 5%;
     margin-bottom: 7%;
     border-radius: 10px;
     font-family: "arial";
@@ -39,19 +38,6 @@ body {
     font-size: 18px;
     line-height: 40px;
 }
-
-/* .registro a {
-    color: rgb(13, 12, 12);
-    text-decoration: none;
-}
-a{
-    text-decoration: none;
-} */
-
-/* .registro a:hover {
-    color: rgb(156, 71, 180);
-    text-decoration: underline;
-} */
 
 .boton {
     position: relative;

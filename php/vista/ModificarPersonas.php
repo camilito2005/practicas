@@ -2,6 +2,7 @@
 include "../conexion.php";
 $id = $_GET["id"];
 $consulta = $conexion->query("SELECT * FROM personas WHERE id = $id");
+$depar = $conexion->query("SELECT* FROM departamento");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,14 +20,13 @@ $consulta = $conexion->query("SELECT * FROM personas WHERE id = $id");
         <form action="../controlador/ControladorUsuarios.php" method="post">
             <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
             <?php
-            while ($filas = $consulta->fetch_object()) { ?>
-
-                <!-- <label for="">departamento
-                    <select name="" id="">
-                        <option value=""><?= $filas->id_departamento ?></option>
-                    </select>
-
-                </label><br> -->
+            
+            while ($filas = $consulta->fetch_object()) {?>
+               
+<!-- <label for="">
+    <input type="text" disabled value=">">
+</label> -->
+                </label><br>
                 <label for="">nombre
                     <input type="text" value="<?= $filas->nombre ?>" name="nombre">
                 </label><br>

@@ -23,6 +23,7 @@ if (isset($_POST["registrar"])) {
 
 if (isset($_POST["modificar"])) {
 
+    
     $id = $_POST["id"];
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];

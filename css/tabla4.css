@@ -40,13 +40,7 @@ tr:nth-child(even) {
     cursor: pointer;
     font-size: 16px;
 }
-/* .modificar{
-    color: black;
-    cursor: pointer;
-    transition: all 0.5s;
-    font-size: 16px;
-    
-} */
+
 .modificar:hover{
     color: rgb(240, 244, 247);
 }
@@ -59,11 +53,6 @@ tr:nth-child(even) {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-
-    /* color: rgb(15, 15, 15);
-    cursor: pointer;
-    transition: all 0.5s;
-    font-size: 16px; */
 }
 .eliminar:hover{
     color: brown;
