@@ -1,4 +1,4 @@
-
+/* estilos para el formulario (modificar) */
 form {
     display: flex;
     flex-direction: column;
@@ -11,12 +11,12 @@ form {
     align-items: center;
 }
 
-
+/* estilos para las letras */
 label {
     margin-top: 10px;
     font-weight: bold;
 }
-
+/* estilos para los botones (cajas de texto a modificar)*/
 input {
     padding: 10px;
     margin-top: 5px;
@@ -25,7 +25,7 @@ input {
     border-radius: 4px;
 }
 
-
+/* estilos para el boton (mofificar) */
 .button {
     padding: 10px 15px;
     margin-top: 20px;
@@ -41,7 +41,7 @@ input {
     background-color: #45a049;
 }
 
-
+/* estilos para pantallas mas pequeñas */
 @media (max-width: 600px) {
     form {
         padding: 10px;

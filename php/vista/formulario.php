@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/formulario1.css">
+    <link rel="stylesheet" href="../../css/formulario2.css">
     <title>formulario</title>
 </head>
 
 <body>
-    <h3>formulario de registro</h3>
+    
+    <div class="botones">
+        <a class="boton" href="../../menu.php">inicio</a>
+    </div>
+    <h3 class="formu">formulario de registro</h3>
     <div class="registro">
         <h3>registrate</h3>
         <form action="../controlador/ControladorUsuarios.php" method="post">
@@ -18,16 +22,16 @@
             </label><br>
 
             <label for="">departamento
-                <select name="departamento" id="">
+                <select name="departamento" class="control" id="">
                     <?php
                     include "../conexion.php"; // Incluir el archivo de conexión a la base de datos
                     $filas = $conexion->query("SELECT * FROM departamento "); // Ejecutar una consulta SQL para obtener todos los registros de la tabla 'departamento'
-                    
-                    while ($f = $filas->fetch_object()) {?>
+
+                    while ($f = $filas->fetch_object()) { ?>
                         <option value="<?= $f->id ?>"><?= $f->nombre_departamento ?></option>
-                   <?php } // Fin del bucle while
+                    <?php } // Fin del bucle while
                     ?>
-                    
+
                 </select>
             </label>
             <label for="">apellido
@@ -44,15 +48,14 @@
             <label for="">contraseña
                 <input class="control" placeholder="ingrese su contraseña" required type="password" name="contraseña"><br>
             </label>
-            
+
             <input class="boton" type="submit" value="registrar" name="registrar">
             <a class="boton-inicio" href="../vista/login.php">ya tienes cuentas?</a>
-            
+
         </form>
+
     </div>
-    <div class="botones">
-        <a href="../../menu.php">inicio</a>
-    </div>
+
 </body>
 
 </html>

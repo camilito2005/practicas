@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/tabla4.css">
+    <link rel="stylesheet" href="../../css/tabla5.css">
     <title>Document</title>
 </head>
 
@@ -34,7 +34,7 @@
                 include "../conexion.php"; // Incluyo el archivo de conexión a la base de datos
                 include "../modelo/ModeloUsuarios.php"; // Incluyo el archivo del modelo Departamento
                 $funcion = new Registro;  // Creo una instancia de la clase Departamento
-                $persona = $funcion->mostrar();// Llamo a la funcion 'mostrar' para obtener la lista de usuarios
+                $persona = $funcion->mostrar(); // Llamo a la funcion 'mostrar' para obtener la lista de usuarios
                 foreach ($persona as $funcion) : ?>
                     <tr>
                         <td><?= $funcion->id ?></td>
@@ -60,10 +60,11 @@
                 ?>
             </tbody>
         </table>
+        <div class="botones">
+            <a class="boton" href="../../menu.php">inicio</a>
+        </div>
     </div>
-    <div class="botones">
-        <a href="../../menu.php">inicio</a>
-    </div>
+
 
 </body>
 

@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/tabla4.css">
+    <link rel="stylesheet" href="../../css/tabla5.css">
     <title>tabla</title>
 </head>
 <script>
-    function Pregunta(){
+    function Pregunta() {
         p = confirm("¿etsas seguro que deseas eliminar este registro?");
         return p;
     }
 </script>
+
 <body>
     <div class="crud-table">
         <table>
@@ -32,26 +33,27 @@
                     $Departamento = $clases->ver(); // Llamo a la funcion 'ver' para obtener la lista de departamentos
 
                     foreach ($Departamento as $clases) { ?>
-                            <tr>
-                                <td><?= $clases->id ?></td>
-                                <td><?= $clases->nombre_departamento ?></td>
-                                <td>
-                                    <a class="modificar" href="./ModificarD.php?id=<?=$clases->id ?>">modifcar</a>
-                                    
-                                    <form action="../controlador/ControladorDepartamento.php?id=<?= $clases->id ?>" method="post">
-                                        <input class="eliminar" type="submit" onclick="return Pregunta()" name="eliminar" value="eliminar">
-                                    </form>
-                                </td>
-                            </tr>
+                    <tr>
+                        <td><?= $clases->id ?></td>
+                        <td><?= $clases->nombre_departamento ?></td>
+                        <td>
+                            <a class="modificar" href="./ModificarD.php?id=<?= $clases->id ?>">modifcar</a>
+
+                            <form action="../controlador/ControladorDepartamento.php?id=<?= $clases->id ?>" method="post">
+                                <input class="eliminar" type="submit" onclick="return Pregunta()" name="eliminar" value="eliminar">
+                            </form>
+                        </td>
+                    </tr>
                 <?php }
                 ?>
 
             </tbody>
         </table>
+        <div>
+            <a class="boton" href="../../menu.php">inicio</a>
+        </div>
     </div>
-    <div>
-        <a href="../../menu.php">inicio</a>
-    </div>
+
 </body>
 
 </html>

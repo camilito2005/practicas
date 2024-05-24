@@ -1,0 +1,91 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Estilos para el contenedor de registro */
+.registro {
+    width: 100%; 
+    max-width: 350px; 
+    background: #f3f5f6; 
+    padding: 5%;
+    margin: auto; 
+    margin-top: 5%;
+    margin-bottom: 7%;
+    border-radius: 10px; 
+    font-family: "arial";
+    color: rgb(10, 12, 12); 
+    box-shadow: 5px 5px 5px #161616; 
+}
+
+/* Estilos para los botones del formulario (cajas de texto) */
+.control {
+    width: 100%; 
+    background: #faf9fb; 
+    padding: 10px; 
+    border-radius: 10px;
+    margin-bottom: 16px; 
+    border: 1px solid #3a98b9;
+    font-family: "arial"; 
+    font-size: 18px; 
+    color: rgb(67, 20, 20); 
+}
+
+/* Estilos para los párrafos dentro del contenedor de registro */
+.registro p {
+    height: 40px; 
+    text-align: center; 
+    font-size: 18px; 
+    line-height: 40px; 
+}
+
+/* Estilos para los botones */
+.boton {
+    position: relative; 
+    display: inline-block; 
+    margin-right: 10px;
+    background: rgb(45, 95, 235); 
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none; 
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    transition: 0.5s;
+    cursor: pointer; 
+    border-radius: 5px; 
+    border: none;
+}
+/*estilos para centrar el texto */
+.formu{
+    text-align: center;
+}
+/* Estilos para los botones */
+.boton-inicio {
+    position: relative; 
+    display: inline-block;
+    margin-right: 10px; 
+    background: rgb(30, 230, 46); 
+    color: white; 
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    transition: 0.5s; 
+    cursor: pointer; 
+    border-radius: 5px;
+    border: none; 
+}
+
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .registro {
+        width: 90%; 
+        margin-top: 5%; 
+        margin-bottom: 5%; 
+    }
+}

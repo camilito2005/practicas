@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2024 a las 05:12:32
+-- Tiempo de generación: 24-05-2024 a las 18:29:34
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,7 +41,7 @@ INSERT INTO `departamento` (`id`, `nombre_departamento`) VALUES
 (3, 'antioquia(medellin)'),
 (7, 'boyaca'),
 (8, 'caldas (manizales)'),
-(9, 'cundinamarca (bogota)');
+(9, 'cundinamarca (bogota) 1');
 
 -- --------------------------------------------------------
 
@@ -60,11 +60,11 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `opciones`, `link`) VALUES
-(2, 'registros', './php/vista/tablaPersonas.php'),
+(2, 'personas registradas', './php/vista/tablaPersonas.php'),
 (3, 'inicia sesion', './php/vista/login.php'),
-(4, 'formulario registro de personas', './php/vista/formulario.php'),
+(4, 'registros de personas', './php/vista/formulario.php'),
 (5, 'agregar departamentos', './php/vista/RegistroDepartamanentos.php'),
-(6, 'registros', './php/vista/TablaDepartamentos.php');
+(6, 'departamentos registrados', './php/vista/TablaDepartamentos.php');
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,8 @@ INSERT INTO `personas` (`id`, `id_departamento`, `nombre`, `apellidos`, `cedula`
 (16, 1, 'prueba 1', 'marrugo1', 1234891, 'ca@gmail.com', '123456'),
 (17, 3, 'camilosss', 'probando', 1043296214, 'prueba@gmail.com', '1234'),
 (22, 7, 'prueba', 'prueba', 1234567, 'pruab@gmail.com', 'camilo'),
-(26, 7, 'camilo', 'prueba', 1043, 'usuarios@gmail.com', '1234');
+(26, 7, 'camilo', 'prueba', 1043, 'usuarios@gmail.com', '1234'),
+(27, 3, 'prueba1', 'probando1', 12331, 'usuarios@gmail.com1', '123451');
 
 --
 -- Índices para tablas volcadas
@@ -123,7 +124,7 @@ ALTER TABLE `personas`
 -- AUTO_INCREMENT de la tabla `departamento`
 --
 ALTER TABLE `departamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
@@ -135,7 +136,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas

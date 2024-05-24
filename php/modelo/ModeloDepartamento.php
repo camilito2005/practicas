@@ -17,9 +17,9 @@ class Departamento{
 
         // Verifico si la consulta se ejecutó correctamente
         if($r){
-             // Redirigir a la página de la tabla de departamentos después del registro exitoso
+             // Redirijo a la página de la tabla de departamentos después del registro exitoso
             header("Location: ../vista/TablaDepartamentos.php");
-            echo "registro exitoso";
+            // echo  "registro exitoso";
             // header("Location ../vista/RegistroDepartamanetos.php");
         }
         else {

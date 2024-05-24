@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/login3.css">
+    <link rel="stylesheet" href="../../css/login4.css">
     <title>login</title>
 </head>
 
 <body>
     <!-- <p>inicia session</p> -->
     <?php
-    if (isset($_SESSION["nombre"])) {
-        $_SESSION["nombre"];
-    }
+    if (isset($error)) {?>
+       <div class="error"><?php echo $error;?></div>
+    <?php }
     ?>
-    
+    <div> 
+        <a href="../../menu.php">inicio</a>
+    </div>
+
     <div class="inicio">
         <p>inicia session</p>
         <form class="login-form" action="../controlador/ControladorUsuarios.php" method="post">
@@ -33,8 +36,10 @@
 
 
         </form>
+
     </div>
-    <a href="../../menu.php">inicio</a>
+
+
 </body>
 
 </html>

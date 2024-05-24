@@ -1,15 +1,16 @@
-*{
+*{ /*estilos para todo el documento*/
     margin: 0;
     padding: 0;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
+ /*estilos para el contenedor de la tabla*/
 .crud-table {
     width: 100%;
     overflow-x: auto;
     
 }
-
+ /*estilos para la tabla*/
 table {
     width: 80%;
     border-collapse: collapse;
@@ -30,6 +31,7 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+ /*estilos para los botones (modificar en este caso)*/
 .modificar {
     padding: 10px 15px;
     margin-top: 20px;
@@ -44,6 +46,7 @@ tr:nth-child(even) {
 .modificar:hover{
     color: rgb(240, 244, 247);
 }
+ /*estilos para los botones (eliminar en este caso)*/
 .eliminar{
     padding: 10px 15px;
     margin-top: 20px;
@@ -62,6 +65,24 @@ tr:nth-child(even) {
     align-items: center;
     text-align: center;
 }
+ /*estilos para los botones (regresar al menu)*/
+.boton {
+    position: relative; /* Posición relativa */
+    display: inline-block; /* Muestra en línea */
+    margin-right: 10px; /*lo ruedo hacia derecho */
+    background: rgb(45, 95, 235); /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 6px 20px; /* Relleno */
+    text-decoration: none; /* Sin decoración de texto */
+    font-weight: 500; /* Grosor de la fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    transition: 0.5s; /* Transición suave */
+    cursor: pointer; /* Cursor de ratón */
+    border-radius: 5px; /* Borde redondeado */
+    border: none; /* Sin borde */
+}
+ /*estilos para pantallas mas pequeñas*/
 @media screen and (max-width: 600px) {
     table {
         border: 0;

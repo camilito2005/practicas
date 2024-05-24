@@ -33,7 +33,7 @@ class Registro
         else {
              // Muestro un mensaje de error si la consulta no se ejecuta correctamente
             include "../vista/tablaPersonas.php";
-            echo "error";
+            $error = "error";
         }
         
         
@@ -90,8 +90,10 @@ class Registro
             header("Location:../../menu.php");
         } else {
             // Muestro un mensaje de error si las credenciales son incorrectas
-            include "../vista/login.php";
-            echo "credenciales erroneas, por favor intentelo de nuevo";
+            // include "../vista/login.php";
+            $error = "credenciales erroneas, por favor intentelo de nuevo";
+            require_once('../vista/login.php');
+            return;
         }
     }
     // funcion para mostrar los datos de la tabla de personas

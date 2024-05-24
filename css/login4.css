@@ -1,9 +1,9 @@
-body {
+body { /* estilos para el cuerpo del documento */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* estilos para el contenedor */
 .inicio {
     width: 100%;
     max-width: 280px; 
@@ -18,7 +18,7 @@ body {
     box-shadow: 15px 15px 15px #180101;
     text-align: center;
 }
-
+/* estilos para los botones (cajas de textos) */
 .control1 {
     width: 80%;
     background: rgb(236, 235, 240);
@@ -31,7 +31,7 @@ body {
     color: rgb(44, 43, 43);
 }
 
-
+/* estilos para los botones (registro)*/
 .inicio .boton {
     position: relative;
     display: inline-block;
@@ -49,6 +49,7 @@ body {
     border-radius: 5px;
     border: none;
 }
+/* estilos para los botones (inicia sesion)*/
 .boton1{
     position: relative;
     display: inline-block;
@@ -72,7 +73,15 @@ body {
     gap: 10px;
 }
 
+/* estilos para el mensaje de error */
+.error {
+    position: absolute; 
+    top: 50px; 
+    color: #e02d00; 
+    font-size: 18px; 
+}
 
+/*estilos para pantallas mas pequeñas*/
 @media screen and (max-width: 600px) {
     .inicio {
         width: 90%;
