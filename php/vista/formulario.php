@@ -20,11 +20,12 @@
             <label for="">departamento
                 <select name="departamento" id="">
                     <?php
-                    include "../conexion.php";
-                    $filas = $conexion->query("SELECT * FROM departamento ");// SELECT * FROM personas INNER JOIN departamento ON personas.id_departamento = departamento.id_departamento
+                    include "../conexion.php"; // Incluir el archivo de conexión a la base de datos
+                    $filas = $conexion->query("SELECT * FROM departamento "); // Ejecutar una consulta SQL para obtener todos los registros de la tabla 'departamento'
+                    
                     while ($f = $filas->fetch_object()) {?>
                         <option value="<?= $f->id ?>"><?= $f->nombre_departamento ?></option>
-                   <?php }
+                   <?php } // Fin del bucle while
                     ?>
                     
                 </select>

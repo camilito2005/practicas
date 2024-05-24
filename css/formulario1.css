@@ -1,97 +1,86 @@
-
+/* Estilos generales para el cuerpo de la página */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimino el margen predeterminado */
+    padding: 0; /* Elimino el relleno predeterminado */
+    box-sizing: border-box; /* Utilizo el modelo de caja de borde, que incluye el borde y el relleno en el ancho y alto totales del elemento */
 }
 
+/* Estilos para el contenedor de registro */
 .registro {
-    width: 100%;
-    max-width: 350px; 
-    background: #f3f5f6;
-    padding: 5%;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 7%;
-    border-radius: 10px;
-    font-family: "arial";
-    color: rgb(10, 12, 12);
-    box-shadow: 5px 5px 5px #161616;
+    width: 100%; /* Establezco el ancho del contenedor al 100% del contenedor padre */
+    max-width: 350px; /* Establezco el ancho máximo del contenedor */
+    background: #f3f5f6; /*le doy un Color al fondo */
+    padding: 5%; /* Relleno interno */
+    margin: auto; /* Centro el contenedor horizontalmente */
+    margin-top: 5%; /* espacio hacia arriba */
+    margin-bottom: 7%; /* espacio entre los botones  */
+    border-radius: 10px; /* Borde redondeado */
+    font-family: "arial"; /* Fuente del texto */
+    color: rgb(10, 12, 12); /* Color del texto */
+    box-shadow: 5px 5px 5px #161616; /* Sombra */
 }
 
-
+/* Estilos para los elementos de entrada de texto */
 .control {
-    width: 100%;
-    background: #faf9fb;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #3a98b9;
-    font-family: "arial";
-    font-size: 18px;
-    color: rgb(67, 20, 20);
+    width: 100%; /* Establezco el ancho al 100% del contenedor */
+    background: #faf9fb; /* Color de fondo */
+    padding: 10px; /* Relleno interno */
+    border-radius: 10px; /* Borde redondeado */
+    margin-bottom: 16px; /* espcaio entre los botones */
+    border: 1px solid #3a98b9; /* Borde */
+    font-family: "arial"; /* Fuente del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    color: rgb(67, 20, 20); /* Color del texto */
 }
 
+/* Estilos para los párrafos dentro del contenedor de registro */
 .registro p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
+    height: 40px; /* Altura del párrafo */
+    text-align: center; /* Alineo el texto al centro*/
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 40px; /* Altura de línea */
 }
 
-.boton {
-    position: relative;
-    display: inline-block;
-    margin-right: 10px;
-    background: rgb(45, 95, 235);
-    color: white;
-    padding: 6px 20px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: 0.5s;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-}
+/* Estilos para los botones */
+.boton,
 .boton-inicio {
-    position: relative;
-    display: inline-block;
-    margin-right: 10px;
-    background: rgb(31, 143, 28);
-    color: white;
-    padding: 6px 20px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: 0.5s;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
+    position: relative; /* Posición relativa */
+    display: inline-block; /* Muestra en línea */
+    margin-right: 10px; /*lo ruedo hacia derecho */
+    background: rgb(45, 95, 235); /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 6px 20px; /* Relleno */
+    text-decoration: none; /* Sin decoración de texto */
+    font-weight: 500; /* Grosor de la fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    transition: 0.5s; /* Transición suave */
+    cursor: pointer; /* Cursor de ratón */
+    border-radius: 5px; /* Borde redondeado */
+    border: none; /* Sin borde */
 }
 
+/* Estilos para el mensaje de éxito */
 .success {
-    position: absolute;
-    top: 50px;
-    color: #00c83c;
-    font-size: 18px;
+    position: absolute; /* Posición absoluta */
+    top: 50px; /* Posición superior */
+    color: #00c83c; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
 }
 
+/* Estilos para el mensaje de error */
 .error {
-    position: absolute;
-    top: 50px;
-    color: #e02d00;
-    font-size: 18px;
+    position: absolute; /* Posición absoluta */
+    top: 50px; /* Posición superior */
+    color: #e02d00; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
 }
 
+/* Estilos para pantallas pequeñas */
 @media screen and (max-width: 600px) {
     .registro {
-        width: 90%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        width: 90%; /* Reduzco el ancho del contenedor */
+        margin-top: 5%; /* Margen superior */
+        margin-bottom: 5%; /* Margen inferior */
     }
 }

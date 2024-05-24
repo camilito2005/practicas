@@ -31,9 +31,10 @@
             </thead>
             <tbody>
                 <?php
-                include "../modelo/ModeloUsuarios.php";
-                $funcion = new Registro;
-                $persona = $funcion->mostrar();
+                include "../conexion.php"; // Incluyo el archivo de conexión a la base de datos
+                include "../modelo/ModeloUsuarios.php"; // Incluyo el archivo del modelo Departamento
+                $funcion = new Registro;  // Creo una instancia de la clase Departamento
+                $persona = $funcion->mostrar();// Llamo a la funcion 'mostrar' para obtener la lista de usuarios
                 foreach ($persona as $funcion) : ?>
                     <tr>
                         <td><?= $funcion->id ?></td>

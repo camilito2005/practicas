@@ -24,12 +24,12 @@
                 </tr>
             </thead>
             <tbody><?php
-                    include "../conexion.php";
-                    include "../modelo/ModeloDepartamento.php";
+                    include "../conexion.php"; // Incluyo el archivo de conexión a la base de datos
+                    include "../modelo/ModeloDepartamento.php"; // Incluyo el archivo del modelo Departamento
 
-                    $clases = new Departamento();
+                    $clases = new Departamento(); // Creo una instancia de la clase Departamento
 
-                    $Departamento = $clases->ver();
+                    $Departamento = $clases->ver(); // Llamo a la funcion 'ver' para obtener la lista de departamentos
 
                     foreach ($Departamento as $clases) { ?>
                             <tr>

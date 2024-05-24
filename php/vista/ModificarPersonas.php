@@ -1,8 +1,7 @@
 <?php
-include "../conexion.php";
-$id = $_GET["id"];
-$consulta = $conexion->query("SELECT * FROM personas WHERE id = $id");
-$depar = $conexion->query("SELECT* FROM departamento");
+include "../conexion.php"; // incluyo la conexion de la base de datos
+$id = $_GET["id"]; // Obtengo el parámetro 'id' de la URL y lo guardo en una variable "$id"
+$consulta = $conexion->query("SELECT * FROM personas WHERE id = $id"); // realizo la consulta para seleccionar todos los datos de la tabla "personas"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,10 +21,6 @@ $depar = $conexion->query("SELECT* FROM departamento");
             <?php
             
             while ($filas = $consulta->fetch_object()) {?>
-               
-<!-- <label for="">
-    <input type="text" disabled value=">">
-</label> -->
                 </label><br>
                 <label for="">nombre
                     <input type="text" value="<?= $filas->nombre ?>" name="nombre">

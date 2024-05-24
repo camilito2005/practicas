@@ -21,9 +21,9 @@
                 </div>
                 <ul class="nav-links" id="nav-links">
                     <?php
-                    include "./php/conexion.php";
-                    $consulta = mysqli_query($conexion, "SELECT * FROM menu");
-                    $resultado = mysqli_num_rows($consulta);
+                    include "./php/conexion.php"; // Incluyo el archivo de conexión a la base de datos
+                    $consulta = mysqli_query($conexion, "SELECT * FROM menu"); // Ejecuto una consulta SQL para obtener todos los registros de la tabla 'menu'
+                    $resultado = mysqli_num_rows($consulta); // Obtengo el número de filas devueltas por la consulta
                     while ($r = mysqli_fetch_assoc($consulta)) { ?>
 
                         <li>
